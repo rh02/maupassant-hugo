@@ -2,6 +2,9 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}zh-CN{{end}}">
 <head>
 
+     
+      
+
     <meta charset="utf-8">
     {{ .Hugo.Generator }}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,9 +45,23 @@
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
-    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script async type="text/javascript" src="{{ "js/jquery-3.3.1.min.js" | relURL }}"></script>
 
-    {{ if .Site.Params.googleAd }}
+    {{ if not .Site.IsServer }}
+        {{ if .Site.GoogleAnalytics }}
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?{{ .Site.GoogleAnalytics }}";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        {{ end }}
+    {{ end }}
+
+    <!-- {{ if .Site.Params.googleAd }}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -52,7 +69,7 @@
         enable_page_level_ads: true
     });
     </script>
-    {{ end }}
+    {{ end }} -->
 
 
     <!-- custom css -->
