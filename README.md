@@ -1,10 +1,10 @@
 # Maupassant
 Maupassant theme, ported to Hugo.
 
-1. 预览效果:[飞雪无情的博客](http://www.flysnow.org)
+1. 预览效果:[Gopher's Blog](http://shenheng.xyz)
 2. [English Docs](README_EN.md)
 
-一款非常简洁、性能高的Hugo主题，适配不同的设备（PC，Mobile等）。 主要是基于 Typecho [Cho](https://github.com/pagecho/maupassant/), 从 [JokerQyou](https://github.com/JokerQyou/maupassant-hugo) forked，修改和添加了很多功能而成，如GA统计、最近的文章、标签云、自定义菜单、按日期归档等 .
+一款非常简洁、性能高的Hugo主题，适配不同的设备（PC，Mobile等）。 主要是基于 Typecho [Cho](https://github.com/pagecho/maupassant/), 从 [JokerQyou](https://github.com/JokerQyou/maupassant-hugo) forked，修改和添加了很多功能而成，如GA统计、最近的文章、标签云、自定义菜单、按日期归档、地图等.
 
 ## Preview
 
@@ -32,6 +32,8 @@ Maupassant theme, ported to Hugo.
 18. 自定义css、js
 19. utteranc评论
 20. 部分自定义的shortcode
+21. 百度地图
+22. 目录生成
 
 ## 下载安装
 
@@ -51,18 +53,18 @@ theme = "maupassant"
 #### 基本配置
 
 ```toml
-baseURL = "http://www.flysnow.org"
+baseURL = "http://shenheng.xyz"
 languageCode = "zh-CN"
-title = "飞雪无情的博客"
+title = "Gopher's Blog"
 theme = "maupassant"
 
 [author]
-  name = "飞雪无情"
+  name = "Gopher"
 
 [params]
-  author = "飞雪无情"
-  subtitle = "专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构"
-  keywords = "golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序"
+  author = "Gopher"
+  subtitle = "专注于xxxxx"
+  keywords = "golang,go语言,go语言笔记,java,android,博客,项目管理,python,软件架构,公众号,小程序"
   description = "专注于IT互联网，包括但不限于Go语言(golang)、Java、Android、Python、项目管理、抖音分析、软件架构等"
 ```
 
